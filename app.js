@@ -1,0 +1,50 @@
+// const games = require('./data/mydata');
+// console.log(games);
+
+// import chalk from 'chalk'
+
+// console.log(chalk.blue("hello world"));
+
+// const os = require('os');
+
+// const userInfo = os.userInfo();
+// const platform = os.platform();
+// const architecture = os.arch();
+// const uptime = os.uptime();
+// console.log(userInfo, platform, architecture, uptime);
+
+// const fs = require('fs');
+// fs.writeFileSync('data/data.txt', 'Hello World');
+
+// const path = require('path');
+// const filePath = path.join(__dirname, 'data' , 'data.txt');
+// console.log(filePath);
+
+// const http = require("http");
+// require("dotenv").config();
+// const Port = process.env.PORT || 3000;
+// const server = http.createServer((req, res) => {
+//   res.writeHead(200, { "Content-Type": "text/html" });
+//   res.write("<p>This is a simple HTTP server.</p>");
+//   res.end("Hello World");
+// });
+
+// server.listen(Port, () => {
+//   console.log(`Server is running on port ${Port}`);
+// });
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    if (req.url === '/') {
+        res.writeHead(200, {'Content-Type': 'text/html'})
+        res.end(`<h1 style='color:navy'Hello from Node.js!</h1>
+            <p>Built with pure Node.js http module.</p>`);
+    }
+    else {
+        res.writeHead(404, {'Content-Type':'application/json'});
+        res.end(JSON.stringify({error: "Route not found"}));
+    }
+});
+
+server.listen(3000, () => console.log("Running on 3000"))
