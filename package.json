@@ -1,28 +1,18 @@
 {
-  "name": "wd3",
+  "name": "sectiona_webdevproject",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/shourya0pratap/WebDev3_SectionA#readme",
-  "bugs": {
-    "url": "https://github.com/shourya0pratap/WebDev3_SectionA/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shourya0pratap/WebDev3_SectionA.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "nodemon app.js",
-    "dev": "nodemon app.js"
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
-    "chalk": "^6.0.0",
-    "dotenv": "^17.4.2"
-  },
-  "devDependencies": {
+    "express": "^5.2.1",
     "nodemon": "^3.1.14"
   }
 }
